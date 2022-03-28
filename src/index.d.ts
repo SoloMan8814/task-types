@@ -4,12 +4,9 @@
 - age - число
 - gender - 'male' или 'female'
  */
-export function getPersons() {
-    let name: string;
-    let age: number;
-    let gender: 'male' | 'female';
-    return [{ name, age, gender }];
-}
+export function getPersons(): [
+    { name: string; age: number; gender: 'male' | 'female' },
+] {}
 
 /*
 Типизируйте функцию personToString, возвращающую строку и принимающую объект одного из следующих форматов:
@@ -28,9 +25,4 @@ export function personToString(person: {
     age: number;
     gender: 'male' | 'female';
     company?: string;
-}): string {
-    if (person.company !== undefined) {
-        return `${person}`;
-    }
-    return `${person}`;
-}
+}): string {}
